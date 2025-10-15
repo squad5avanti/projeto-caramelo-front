@@ -1,0 +1,36 @@
+.card{
+    background-color: var(--bege);
+    border-radius: 0.5rem;
+    padding: 1rem;
+
+    width: 20rem;
+    margin: 2rem 2rem;
+
+    & img{
+        width: 4rem;
+        border-radius: 2rem;
+    }
+
+    & .card-1-info{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--caramelo);
+  width: 0.75rem;
+}
+
+.swiper-pagination-bullet {
+  background: #ccc;
+  opacity: 1;
+  margin-top: 2rem;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--caramelo);
+}
+
