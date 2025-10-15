@@ -307,3 +307,332 @@ h2 {
     background-position-x: -1000px;
   }
 }
+
+
+
+
+
+
+/*--------------------------------------------------------------------------*/
+
+
+
+
+:root {
+    --caramelo: #BD7312;
+    --bege: #F4EED8;
+    --amarelo: #FDD72C;
+    --roxo: #DEDDFF;
+    --verde: #68D7B6;
+    --preto: #3C3C41;
+    --branco: #F9F6F4;
+    --input-color: #E6DED0;
+    --title: 400 1.5rem/2rem "Caprasimo", serif;
+}
+
+html, body {
+    font-family: 'Inter', sans-serif; 
+    margin: 0;
+    padding: 0; 
+    height: 100%; 
+    width: 100%;
+    overflow: hidden; 
+    background-color: var(--bege); 
+}
+
+.main {
+    display: flex; 
+    width: 100%;
+    height: 100vh; 
+}
+
+/* ------------------------------------------- */
+/* ORDEM E CORES PADRÃO (Usado em index.html) */
+/* ------------------------------------------- */
+.div-esquerda {
+    background-color: var(--caramelo); 
+    flex: 3; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    overflow: hidden; 
+    background-image: url(./assets/background.svg);
+    order: 1; 
+}
+
+.div-direita {
+    background-color: var(--bege); 
+    flex: 2;
+    display: flex;
+    align-items: flex-start; 
+    justify-content: center; 
+    padding: 20px 50px; 
+    order: 2; 
+}
+
+/* ------------------------------------------- */
+/* INVERSÃO (Aplicado apenas ao Criar Conta - Divs) */
+/* ------------------------------------------- */
+.layout-invertido .div-esquerda {
+    order: 2; 
+    background-color: var(--bege); 
+}
+
+.layout-invertido .div-direita {
+    order: 1; 
+    background-color: var(--caramelo); 
+}
+
+
+.logo{
+    display: flex;
+    padding: 0;
+    width: 200px;
+    height: 80px; 
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0; 
+    margin-bottom: 20px; 
+}
+.page {
+    display: flex;
+    flex-direction: column;
+    width: 90%; 
+    max-width: 550px; 
+    min-width: 200px; 
+}
+
+.imagem {
+    max-width: 80%; 
+    height: auto;
+    border-radius: 12px;
+}
+
+/* -------------------------- */
+/*  FORMULÁRIO PADRÃO */
+/* -------------------------- */
+.formLogin {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    padding: 30px 0; 
+    gap: 1px;
+    width: 100%; 
+}
+
+.formLogin h1 {
+    font-family: "Caprasimo", serif; 
+    text-align: center;
+    color: var(--caramelo); 
+    margin: 0 0 20px 0;
+    font-size: 4em;
+    letter-spacing: 1px;
+}
+
+
+.formLogin p {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    
+    font-size: 14px;
+    color: var(--preto); 
+    margin-bottom: 15px; 
+    line-height: 1.4; 
+    text-align: left; 
+}
+
+.formLogin label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--preto); 
+    margin-top: 5px;
+}
+
+.formLogin input:not([type="submit"]):not([type="checkbox"]) {
+    padding: 15px 15px; 
+    width: 100%;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: all linear 160ms;
+    outline: none;
+    box-sizing: border-box; 
+    margin-top: 5px;
+    margin-bottom: 20px;
+    background-color: var(--input-color);
+}
+
+.formLogin input:focus {
+    border-color: var(--caramelo); 
+}
+
+.formLogin input[type="checkbox"] {
+    appearance: none; 
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--caramelo); 
+    border-radius: 4px;
+    cursor: pointer;
+    flex-shrink: 0;
+    position: relative;
+    margin: 0; 
+}
+
+.formLogin input[type="checkbox"]:checked {
+    background-color: var(--caramelo);
+    border-color: var(--caramelo);
+}
+
+.formLogin input[type="checkbox"]:checked::before {
+    content: '✓'; 
+    color: var(--bege); 
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1;
+}
+
+
+
+.formLogin a {
+    font-size: 13px;
+    color: var(--caramelo); 
+    text-decoration: none;
+    transition: color linear 160ms;
+    
+}
+
+.formLogin a:hover {
+    color: var(--preto);
+}
+
+.btn {
+    background-color: var(--caramelo); 
+    color: var(--bege); 
+    font-size: 16px;
+    font-weight: 700;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    margin: 15px 0 0 0;
+}
+
+.btn:hover {
+    border: 2px solid var(--caramelo); 
+    background-color: var(--bege); 
+    color: var(--caramelo); 
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ------------------------------------------- */
+/* INVERSÃO DOS ELEMENTOS INTERNOS  */
+/* Aplicado no layout-invertido */
+/* ------------------------------------------- */
+.layout-invertido .formLogin h1 {
+    color: var(--bege); 
+}
+.layout-invertido .formLogin p,
+.layout-invertido .formLogin label {
+    color: var(--bege); 
+}
+
+.layout-invertido .formLogin input[type="checkbox"] {
+    border: 2px solid var(--bege); 
+}
+
+.layout-invertido .formLogin input[type="checkbox"]:checked {
+    background-color: var(--bege); 
+    border-color: var(--bege);
+}
+
+.layout-invertido .formLogin input[type="checkbox"]:checked::before {
+    color: var(--caramelo); 
+}
+
+.layout-invertido .formLogin input:focus {
+    border-color: var(--bege); 
+}
+
+.layout-invertido .formLogin a {
+    color: var(--bege); 
+}
+
+.layout-invertido .formLogin a:hover {
+    color: var(--preto); 
+}
+
+.layout-invertido .btn {
+    background-color: var(--bege); 
+    color: var(--caramelo); 
+}
+
+.layout-invertido .btn:hover {
+    border: 2px solid var(--bege); 
+    background-color: var(--caramelo); 
+    color: var(--bege); 
+}
+
+/* ------------------------------------------- */
+/* MMobile*/
+/* ------------------------------------------- */
+@media (max-width: 768px) { 
+    
+    .main {
+        flex-direction: column; 
+        height: auto;
+    }
+    
+    .div-esquerda {
+        display: none; 
+    }
+
+    .div-direita {
+        flex: 1; 
+        min-height: 100vh; 
+        padding: 20px 10px;
+        order: 1; 
+        
+        background-color: var(--bege) !important; 
+        align-items: center; 
+    }
+
+    .formLogin {
+        box-shadow: none; 
+        padding: 30px 20px;
+    }
+    
+    .layout-invertido .formLogin h1,
+    .layout-invertido .formLogin p,
+    .layout-invertido .formLogin label,
+    .layout-invertido .formLogin a {
+        color: var(--caramelo); 
+    }
+    .layout-invertido .btn {
+        background-color: var(--caramelo);
+        color: var(--bege);
+    }
+    .layout-invertido .btn:hover {
+        border: 2px solid var(--caramelo); 
+        background-color: var(--bege); 
+        color: var(--caramelo);
+    }
+}
+
+
+input:valid {
+    border: 2px solid green;
+}
+input:invalid {
+    border: 2px solid red;
+}

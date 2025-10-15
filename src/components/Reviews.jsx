@@ -19,7 +19,7 @@ export default function Reviews() {
 
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
-            className='mySwiper'
+            classNameNameName='mySwiper'
         >
 
             <SwiperSlide>
@@ -27,9 +27,9 @@ export default function Reviews() {
             </SwiperSlide>
 
             <SwiperSlide>
-                <div className="card">
+                <div classNameNameName="card">
                 <p>“Adoramos o atendimento, escolhi o pet perfeito para mim com a ajuda dessa equipe”</p>
-                <div className='card-1-info'>
+                <div classNameNameName='card-1-info'>
                     <div>
                         <img src="https://i.pinimg.com/736x/f6/21/08/f621082bc6b6da5624788118b0e1d67c.jpg" alt="" />
                     </div>
@@ -42,9 +42,9 @@ export default function Reviews() {
             </SwiperSlide>
 
             <SwiperSlide>
-                <div className="card">
+                <div classNameNameName="card">
                 <p>“Adoramos o atendimento, escolhi o pet perfeito para mim com a ajuda dessa equipe”</p>
-                <div className='card-1-info'>
+                <div classNameNameName='card-1-info'>
                     <div>
                         <img src="https://i.pinimg.com/736x/1e/0c/d0/1e0cd0e78eb90077c3769b3afe44da9b.jpg" alt="" />
                     </div>
@@ -57,9 +57,9 @@ export default function Reviews() {
             </SwiperSlide>
 
              <SwiperSlide>
-                <div className="card">
+                <div classNameNameName="card">
                 <p>“Adoramos o atendimento, escolhi o pet perfeito para mim com a ajuda dessa equipe”</p>
-                <div className='card-1-info'>
+                <div classNameNameName='card-1-info'>
                     <div>
                         <img src="https://i.pinimg.com/736x/1e/0c/d0/1e0cd0e78eb90077c3769b3afe44da9b.jpg" alt="" />
                     </div>
@@ -73,9 +73,9 @@ export default function Reviews() {
 
 
              <SwiperSlide>
-                <div className="card">
+                <div classNameNameName="card">
                 <p>“Adoramos o atendimento, escolhi o pet perfeito para mim com a ajuda dessa equipe”</p>
-                <div className='card-1-info'>
+                <div classNameNameName='card-1-info'>
                     <div>
                         <img src="https://i.pinimg.com/1200x/3e/9d/5a/3e9d5a23522f953ba7a7b6388bf1c29f.jpg" alt="" />
                     </div>
@@ -89,9 +89,9 @@ export default function Reviews() {
 
 
              <SwiperSlide>
-                <div className="card">
+                <div classNameNameName="card">
                 <p>“Adoramos o atendimento, escolhi o pet perfeito para mim com a ajuda dessa equipe”</p>
-                <div className='card-1-info'>
+                <div classNameNameName='card-1-info'>
                     <div>
                         <img src="https://i.pinimg.com/1200x/ce/57/8f/ce578f683fe59d280016788c6b96a89e.jpg" alt="" />
                     </div>
