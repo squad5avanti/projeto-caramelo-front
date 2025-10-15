@@ -1,0 +1,96 @@
+.header {
+    background: url('../assets/bg-header.svg') no-repeat;
+    background-size: auto;
+    height: 10rem;
+    font-family: 'Inter', sans-serif;
+
+    color: var(--bege);
+
+    & .info-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        max-width: 70rem;
+        margin: 0 auto;
+        padding: 2rem;
+
+        & .logo-header {
+            content: url('../assets/projeto-carammelo-logo.png');
+            width: 10rem;
+        }
+
+        & .btn-header button {
+            padding: .5rem;
+            width: 10rem;
+            background-color: var(--bege);
+            color: var(--caramelo);
+            border: none;
+            border-radius: 0.5rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: ease-in-out 0.2s;
+
+            &:hover {
+                border: 2px solid var(--bege);
+                background-color: var(--caramelo);
+                color: var(--bege);
+                scale: 1.1;
+            }
+        }
+
+        & .menu {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+
+            & a {
+                text-decoration: none;
+                color: var(--bege);
+            }
+        }
+
+    }
+
+}
+
+
+.footer {
+    background: url('../assets/bg-footer.png') no-repeat;
+    background-size: 100%;
+    padding: 5rem;
+    font-family: 'Inter', sans-serif;
+
+    color: var(--bege);
+
+    .info-footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8rem;
+    }
+
+    .terms,
+    .address,
+    .socials {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    .icons {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .terms a {
+        text-decoration: none;
+        color: var(--bege);
+    }
+
+    h2 {
+        font: var(--title);
+    }
+}
+

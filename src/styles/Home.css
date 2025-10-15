@@ -1,0 +1,211 @@
+
+.body-home {
+    background-image: url(https://ik.imagekit.io/dvu2ekrhd/caramelo/background.svg?updatedAt=1760544058180);
+    font-family: 'Inter', sans-serif;
+}
+
+.main-home {
+    & .info-main {
+        display: flex;
+        align-items: center;
+        gap: 10rem;
+
+        max-width: 65rem;
+        margin: 0 auto;
+
+        & .main-description {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            & h1 {
+                font: var(--title);
+                font-size: 3rem;
+                line-height: 3rem;
+                color: var(--caramelo);
+            }
+
+            & p {
+                color: var(--preto);
+            }
+
+            & button {
+                padding: .5rem;
+                width: 10rem;
+                background-color: var(--caramelo);
+                color: var(--bege);
+                border: 2px solid var(--caramelo);
+                border-radius: 0.5rem;
+                font-weight: 700;
+                font-size: 1.25rem;
+                cursor: pointer;
+                transition: ease-in-out 0.2s;
+
+                &:hover {
+                    border: 2px solid var(--caramelo);
+                    background-color: var(--bege);
+                    color: var(--caramelo);
+                    scale: 1.1;
+                }
+            }
+        }
+        & .img-main {
+            content: url('https://ik.imagekit.io/dvu2ekrhd/caramelo/cachorro-caramelo.png?updatedAt=1760542776050');
+            width: 21rem;
+        }
+    }
+
+    & .benefits{
+        background-color: var(--bege);
+        text-align: center;
+        padding: 8rem;
+
+        & .cards-benefits{
+            max-width: 85rem;
+            margin: 0 auto;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+
+            & .cb-1, .cb-2, .cb-3{
+                background-color: var(--branco);
+                padding: 1rem;
+                width: 20rem;
+                border-radius: 1rem;
+                transition: ease-in-out .2s;
+
+                &:hover{
+                    rotate: 2deg;
+                }
+            }
+
+            & .img-cb-1{
+                content: url('../assets/img-benefits-1.svg');
+                margin: 0 auto;
+                width: 8rem;
+            }
+
+            & .img-cb-2{
+                content: url('../assets/img-benefits-2.svg');
+                margin: 0 auto;
+                width: 8rem;
+            }
+            & .img-cb-3{
+                content: url('../assets/img-benefits-3.svg');
+                margin: 0 auto;
+                width: 8rem;
+            }
+            
+        }
+
+        & h2{
+            font: var(--title);
+            color: var(--caramelo);
+        }
+
+        & p{
+            color: var(--preto);
+        }
+    }
+
+    & .adopt {
+        position: relative;
+        max-width: 85rem;
+        margin: 0 auto;
+        text-align: center;
+
+        padding: 10rem;
+
+        & .wave{
+            content: url('../assets/wave.svg');
+            z-index: -1;
+            position: absolute;
+            top: 8rem;
+            left:-10rem;
+            width: 100rem;
+
+            overflow-x: hidden;
+        }
+
+        & h2{
+            color: var(--caramelo);
+            font: var(--title);
+        }
+        & p{
+            color: var(--preto);
+        }
+
+        & .info-adopt{
+            display: flex;
+            padding: 2rem;
+        }
+
+        & .adopt-card-1{
+            background-color: var(--verde);
+            padding: 2rem;
+            border-radius: 1rem;
+            margin: 1rem;
+
+            align-content: center;
+
+            width: 40rem;
+        }
+
+        & .adopt-card-2{
+            background-color: var(--roxo);
+            padding: 2rem;
+            border-radius: 1rem;
+            margin: 1rem;
+            width: 40rem;
+
+            align-content: center;
+
+        }
+
+        & .adopt-card-3{
+            background-color: var(--amarelo);
+            padding: 2rem;
+            border-radius: 1rem;
+            margin: 1rem;
+            width: 40rem;
+        }
+    }
+
+    & .depoimentos {
+        max-width: 82rem;
+        margin: 0 auto;
+
+        padding: 6rem;
+
+        text-align: center;
+
+        & h2{
+            color: var(--caramelo);
+            font: var(--title);
+        }
+
+        & p{
+            color: var(--preto);
+        }
+    }
+}
+
+.divisor {
+  background-image: url('../assets/divisor.svg');
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  height: 4rem;
+
+  animation: scroll-bg 15s linear infinite;
+}
+
+@keyframes scroll-bg {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: -1000px;
+  }
+}
