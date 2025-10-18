@@ -1,12 +1,16 @@
+import { useNavigate } from 'react-router-dom'
 import '../App.css'
 
 function Cadastro(){
+
+    const navigate = useNavigate();
+
     return (
     <>
         <div className="main layout-invertido">
             
             <div className="div-esquerda">
-                <img src="https://ik.imagekit.io/dvu2ekrhd/caramelo/adote-um-pet.gif?updatedAt=1760543407564" alt="Ilustração de um gato e sua dona" className="imagem" />
+                <img src="https://ik.imagekit.io/dvu2ekrhd/caramelo/adote-um-pet.gif?updatedAt=1760543407564" alt="Ilustração de um gato e sua dona" className="imagem"/>
             </div>
             
             
@@ -14,7 +18,7 @@ function Cadastro(){
                 <div className="page">
             
                     <form method="POST" className="formLogin">
-                        <img className="logo" src="https://ik.imagekit.io/dvu2ekrhd/caramelo/logo-claro.svg?updatedAt=1760542860782" alt="logo"/>
+                        <img className="logo" src="https://ik.imagekit.io/dvu2ekrhd/caramelo/logo-claro.svg?updatedAt=1760542860782" alt="logo" onClick={() => navigate('/')}/>
 
                         <h1>Criar conta</h1>
 
@@ -45,7 +49,7 @@ function Cadastro(){
                                 
                             
                         </div>
-                            <p className='access'>Já tem acesso? <a href="">Entre aqui</a></p>
+                            <p className='access'>Já tem acesso? <a href="" onClick={() => navigate('/login')}>Entre aqui</a></p>
                     </form>
 
                 </div>

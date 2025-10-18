@@ -1,3 +1,5 @@
+@import url(../App.css);
+
 .header {
     background: url('../assets/bg-header.svg') no-repeat;
     background-size: auto;
@@ -94,3 +96,119 @@
     }
 }
 
+.card-pets{
+    font-family: 'Inter', sans-serif;
+    width: 17rem;
+    color: var(--preto);
+    padding: 2rem;
+
+    display: flex;
+    gap: 2rem;
+    
+    
+    & .pet-card{
+        background-color: var(--branco);
+        padding: 1rem;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+        & .header-card-pet p, .dados-pets p{
+            font-size: 0.75rem;
+        }
+
+        & .header-card-pet{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-color: var(--bege);
+            border-radius: 2rem;
+            width: 7rem;
+            margin-left: 8rem;
+            margin-bottom: 1rem;
+            
+        }
+
+        & p .icon-disponivel{
+                color: var(--verde);
+            }
+        & p  .icon-reservado{
+                color: var(--amarelo);
+            }
+        & p .icon-adotado{
+                color: var(--roxo);
+            }
+
+        & .dados-pets{
+            & img{
+                width: 5rem;
+                border-radius: 5rem;
+            }
+            margin-bottom: 1rem;
+        }
+
+        & .details-pets{
+            background-color: var(--bege);
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem;
+            align-items: center;
+            gap: 1rem;
+
+            border-radius: 0.75rem;
+            margin-bottom: 1rem;
+
+            & .info-1-pet, .info-2-pet, .info-3-pet{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        & .details-pets p{
+            font-size: 0.75rem;
+            color: var(--caramelo);
+            font-weight: 700;
+        }
+
+        .info-pets span{
+            font-size: 0.9rem;
+            color: var(--caramelo);
+            font-weight: 700;
+            margin-right: 0.25rem;
+        }
+
+        .info-pets p{
+            font-size: 0.9rem;
+            color: var(--preto);
+        }
+        .card-pet-adotar{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+       .card-pet-adotar button{
+        padding: .5rem;
+        width: 50%;
+        margin-top: 1rem;
+        background-color: var(--caramelo);
+        border: 2px solid var(--caramelo);
+        border-radius: .30rem;
+        cursor: pointer;
+
+        color: var(--bege);
+        font-weight: 700;
+        font-size: 0.75rem;
+        transition: ease-in-out 0.1s;
+
+        &:hover{
+            border: 2px solid var(--caramelo);
+            background-color: var(--branco);
+            color: var(--caramelo);
+            scale: 0.9;
+        }
+        
+       } 
+    }
+}

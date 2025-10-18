@@ -1,8 +1,7 @@
-import '../styles/Sobre.css'
 import Footer from '../components/Footer.jsx'
 import Header from '../components/Header.jsx'
 
-function Sobre() {
+function Contato() {
  
   return (
     <>
@@ -15,4 +14,4 @@ function Sobre() {
   )
 }
 
-export default Sobre
+export default Contato

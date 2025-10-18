@@ -3,11 +3,13 @@ import Footer from '../components/Footer.jsx'
 import Header from '../components/Header.jsx'
 import Reviews from '../components/Reviews.jsx'
 
+
 function Home() {
 
   return (
     <>
       <Header />
+
       <div className='body-home'>
         <main className='main-home'>
           <section className='info-main'>
