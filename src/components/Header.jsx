@@ -1,4 +1,4 @@
-import '../styles/Components.css'
+import '../styles/Components.css';
 import { Link } from 'react-router-dom';
 
 export default function Header() {
@@ -8,7 +8,7 @@ export default function Header() {
         <div className='logo-header'></div>
 
         <div className="menu">
-          <Link to="/">Início</Link>
+          <Link to="/">Inicio</Link>
           <Link to="/cards">Conhecer Pets</Link>
           <Link to="/sobre">Sobre</Link>
           <Link to="/contato">Contato</Link>
@@ -21,5 +21,5 @@ export default function Header() {
         </div>
       </div>
     </div>
-  )
+  );
 }
