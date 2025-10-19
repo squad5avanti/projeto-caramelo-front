@@ -20,8 +20,14 @@ function CardsDosPets() {
   const pets = [
     { nome: "Jake", tipo: "Cachorro", idade: "10 anos", genero: "Macho", vacinado: true, imagem: "https://i.ibb.co/pvDJysP5/adventure-time-pictures-x4vl1efzqfne2p8u-fotor-20251017152312.png" },
     { nome: "Coragem", tipo: "Cachorro", idade: "5 ano", genero: "Fêmea", vacinado: false, imagem: "https://i.ibb.co/Vc01VQzb/imagem-cortada-circular-1.png" },
+    { nome: "Salem", tipo: "Gato", idade: "100 anos", genero: "Macho", vacinado: true, imagem: "https://i.ibb.co/yByRHJBx/imagem-cortada-circular.png" },
+    { nome: "Jake", tipo: "Cachorro", idade: "10 anos", genero: "Macho", vacinado: true, imagem: "https://i.ibb.co/pvDJysP5/adventure-time-pictures-x4vl1efzqfne2p8u-fotor-20251017152312.png" },
+    { nome: "Coragem", tipo: "Cachorro", idade: "5 ano", genero: "Fêmea", vacinado: false, imagem: "https://i.ibb.co/Vc01VQzb/imagem-cortada-circular-1.png" },
+    { nome: "Jake", tipo: "Cachorro", idade: "10 anos", genero: "Macho", vacinado: true, imagem: "https://i.ibb.co/pvDJysP5/adventure-time-pictures-x4vl1efzqfne2p8u-fotor-20251017152312.png" },
+    { nome: "Coragem", tipo: "Cachorro", idade: "5 ano", genero: "Fêmea", vacinado: false, imagem: "https://i.ibb.co/Vc01VQzb/imagem-cortada-circular-1.png" },
     { nome: "Salem", tipo: "Gato", idade: "100 anos", genero: "Macho", vacinado: true, imagem: "https://i.ibb.co/yByRHJBx/imagem-cortada-circular.png" }
   ]
+  
 
   return (
     <>
