@@ -2,6 +2,25 @@ import '../styles/Components.css';
 import { Link } from 'react-router-dom';
 
 export default function Header() {
+  // Verifica se o usuário está logado
+  const isAuthenticated = () => {
+    const token = localStorage.getItem('token');
+    return !!token;
+  };
+
+  const getUser = () => {
+    const user = localStorage.getItem('user');
+    return user ? JSON.parse(user) : null;
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    window.location.href = '/';
+  };
+
+  const user = getUser();
+
   return (
     <div className="header">
       <div className="info-header">
@@ -15,9 +34,18 @@ export default function Header() {
         </div>
 
         <div className='btn-header'>
-          <Link to="/login">
-            <button>Fazer Login</button>
-          </Link>
+          {isAuthenticated() ? (
+            <div className="user-logged">
+              <span className="user-name">Olá, {user?.nome}</span>
+              <button onClick={handleLogout} className="logout-btn">
+                Sair
+              </button>
+            </div>
+          ) : (
+            <Link to="/login">
+              <button>Fazer Login</button>
+            </Link>
+          )}
         </div>
       </div>
     </div>
