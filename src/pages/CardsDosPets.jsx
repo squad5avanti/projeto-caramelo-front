@@ -1,7 +1,7 @@
 // === IMPORTAÇÕES ===
 import '../styles/Home.css'
 import '../styles/CardsDosPets.css'
-import '../styles/components.css'
+import '../styles/Components.css'
 import '../styles/Dashboard.css'
 import '../styles/Sobre.css'
 import '../App.css'
