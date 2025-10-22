@@ -1,31 +1,15 @@
-/* === 1. IMPORTAÇÃO DE FONTES === */
-@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Inter:wght@400;600&display=swap');
-
-/* === 2. VARIÁVEIS DE ESTILO === */
-:root {
-  --caramelo: #BD7312;
-  --bege: #F4EED8;
-  --amarelo: #FDD72C;
-  --roxo: #DEDDFF;
-  --verde: #68D7B6;
-  --preto: #3C3C41;
-  --branco: #F9F6F4;
-  --input-color: #E6DED0;
-  --title: 400 1.5rem/2rem "Caprasimo", serif;
-}
 
 /* === 3. CONTAINER PRINCIPAL === */
 .pets-section {
   text-align: center;
-  background-color: var(--branco);
-  padding: 40px 20px 60px;
+  padding: 40px 20px 10px;
 }
 
 .conheca_pets {
   font: var(--title);
   color: var(--caramelo);
   margin-bottom: 10px;
-  font-size: 80px;
+  font-size: 3rem;
   padding-bottom: 50px;
 }
 

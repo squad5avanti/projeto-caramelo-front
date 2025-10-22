@@ -28,7 +28,6 @@ export default function Header() {
 
         <div className="menu">
           <Link to="/">Inicio</Link>
-          <Link to="/cards">Conhecer Pets</Link>
           <Link to="/sobre">Sobre</Link>
           <Link to="/contato">Contato</Link>
         </div>

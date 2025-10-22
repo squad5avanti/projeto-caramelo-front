@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { authService } from '../services/auth';
 import '../App.css';
+import { Link } from 'react-router-dom';
 
 function Login() {
     const [email, setEmail] = useState('');
@@ -41,11 +42,14 @@ function Login() {
                 <div className="div-direita">
                     <div className="page">
                         <form onSubmit={handleSubmit} className="formLogin">
-                            <img 
-                                className="logo" 
-                                src="https://ik.imagekit.io/dvu2ekrhd/caramelo/logo-escuro.svg?updatedAt=1760542894596" 
-                                alt="Logo Caramelo"
-                            />
+                            <Link to="/">
+                                <img 
+                                    className="logo" 
+                                    src="https://ik.imagekit.io/dvu2ekrhd/caramelo/logo-escuro.svg?updatedAt=1760542894596" 
+                                    alt="Logo Caramelo"
+                                    
+                                />
+                            </Link>
                             <h1>Entrar</h1>
 
                             {error && (
