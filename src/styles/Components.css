@@ -57,7 +57,7 @@
 
 }
 
-.header .menu a {
+.header .menu a, .menu-sistema a{
     text-decoration: none;
     color: var(--bege);
     position: relative;
@@ -65,18 +65,18 @@
     transition: all 0.3s ease;
 }
 
-.header .menu a::after {
+.header .menu a::after , .menu-sistema a::after {
     content: '';
     position: absolute;
     left: 0;
     bottom: 0;
     width: 0%;
-    height: 3px;
+    height: 2px;
     background-color: var(--bege);
     transition: width 0.3s ease;
 }
 
-.header .menu a:hover::after {
+.header .menu a:hover::after, .menu-sistema a:hover::after{
     width: 100%;
 }
 
@@ -304,6 +304,44 @@
         }
         
        } 
+    }
+}
+
+.menu-sistema{
+    background-color: var(--caramelo);
+    font-family: 'Inter', sans-serif; 
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    & nav{
+        display: flex;
+        gap: 2rem;
+
+         & a{
+            text-decoration: none;
+            color: var(--bege);
+         }
+    }
+
+    & .busca{
+        background-color: #f4eed857;
+        border-radius: .5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--bege);
+
+        width: 20rem;
+        padding: 0.25rem .5rem;
+        font-size: 0.8rem;
+    }
+
+    & .perfil-menu, .sair-menu{
+        display: flex;
+        gap: .5rem;
+        color: var(--bege);
     }
 }
 

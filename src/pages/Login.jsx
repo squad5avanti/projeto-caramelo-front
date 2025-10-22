@@ -20,7 +20,7 @@ function Login() {
         try {
             const response = await authService.login(email, password);
             console.log('Login bem-sucedido:', response);
-            navigate('/');
+            navigate('/dashboard');
             
         } catch (error) {
             setError(error.message || 'Erro ao fazer login');
@@ -95,7 +95,7 @@ function Login() {
                                 </button>
                             </div>
                             
-                            <p>Ainda não tem acesso? <a href="">Criar conta</a></p>
+                            <p className='acesso-login'>Ainda não tem acesso? <Link to="/cadastro">Criar conta</Link></p>
                         </form>
                     </div>
                 </div>

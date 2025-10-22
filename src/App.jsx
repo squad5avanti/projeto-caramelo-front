@@ -8,6 +8,7 @@ import Login from "./pages/Login.jsx";
 import Cadastro from "./pages/Cadastro.jsx";
 import Sobre from "./pages/Sobre.jsx";
 import Contato from "./pages/Contato.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/sobre" element={<Sobre />} />
         <Route path="/contato" element={<Contato />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
   );

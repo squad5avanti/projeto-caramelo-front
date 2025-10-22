@@ -1,4 +1,5 @@
 import '../App.css'
+import { Link } from "react-router-dom";
 
 function Cadastro(){
     return (
@@ -14,7 +15,10 @@ function Cadastro(){
                 <div className="page">
             
                     <form method="POST" className="formLogin">
+                        <Link to="/">
                         <img className="logo" src="https://ik.imagekit.io/dvu2ekrhd/caramelo/logo-claro.svg?updatedAt=1760542860782" alt="logo"/>
+                        </Link>
+                        
 
                         <h1>Criar conta</h1>
 
@@ -45,7 +49,7 @@ function Cadastro(){
                                 
                             
                         </div>
-                            <p className='access'>Já tem acesso? <a href="">Entre aqui</a></p>
+                            <p className='access'>Já tem acesso? <Link to="/login">Entre aqui</Link> </p>
                     </form>
 
                 </div>

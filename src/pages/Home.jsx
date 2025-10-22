@@ -63,7 +63,7 @@ function Home() {
               </div>
 
               <div className="adopt-card-3">
-                <p>Reserve o animal desejado, e aguarde a apovação do formulário. Depois disso venha até a unidade conhecer o seu novo amigo!</p>
+                <p>Reserve o animal desejado, e aguarde a aprovação do formulário. Depois disso venha até a unidade conhecer o seu novo amigo!</p>
               </div>
 
             </div>
