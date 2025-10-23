@@ -1,0 +1,162 @@
+/* PÁGINA SOBRE css */
+
+.sobre-page{
+    font-family: 'Inter', sans-serif;
+    background-image: url(https://ik.imagekit.io/dvu2ekrhd/caramelo/background.svg?updatedAt=1760544058180);
+    
+    
+
+    & .sobre-txt{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem 6rem;
+
+        & h1{
+            color: var(--caramelo);
+            font: var(--title);
+            font-size: 3rem;
+            text-align: center;
+        }
+        & h3{
+            color: var(--caramelo);
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        & p{
+            font-size: 1rem;
+        }
+
+        & span{
+            color: var(--caramelo);
+            font-weight: 700;
+        }
+    }
+
+    & .cards-sobre{
+        max-width: 85rem;
+        margin: 2rem auto;
+        width: 50rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        
+
+        & .missao, .visao{
+            background-color: var(--bege);
+            width: 50rem;
+            height: 20rem;
+            padding: 2rem;
+            border-radius: 2rem;
+
+
+            & h2{
+                color: var(--caramelo);
+                font: var(--title);
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            & span{
+                color: var(--caramelo);
+                font-weight: 700;
+            }
+        }
+    }
+
+    & .location-sobre{
+        margin: 0 auto;
+        background-color: var(--bege);
+
+        & h2{
+            padding: 2rem 10rem;
+            font: var(--title);
+            font-size:2rem;
+            color: var(--caramelo);
+        }
+
+        & p{
+            padding: 0 10rem;
+        }
+        
+
+        & .galery-sobre{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); 
+            gap: 1.5rem;
+            padding: 3rem 10rem;
+
+            & img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1rem;
+            transition: ease-in 0.2s;
+
+                &:hover{
+                    transform: scale(1.05);
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                }
+
+            }
+            & .img-sobre-1, .img-sobre-2, .img-sobre-5, .img-sobre-7{
+                grid-column: span 2;
+            }
+
+            & .img-sobre-4, .img-sobre-6{
+                grid-column: span 3;
+            }
+        }
+    }
+
+
+}
+
+.contato-page{
+    
+}
+
+@media screen and (max-width: 768px) {
+  .sobre-page .location-sobre .galery-sobre {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+  .sobre-page .location-sobre .galery-sobre .img-sobre-1, 
+  .sobre-page .location-sobre .galery-sobre .img-sobre-2,
+.sobre-page .location-sobre .galery-sobre .img-sobre-3,
+.sobre-page .location-sobre .galery-sobre .img-sobre-4,
+.sobre-page .location-sobre .galery-sobre .img-sobre-5,
+.sobre-page .location-sobre .galery-sobre .img-sobre-6,
+.sobre-page .location-sobre .galery-sobre .img-sobre-7{
+    grid-column: 1;
+  }
+
+  .sobre-page .cards-sobre {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sobre-page .cards-sobre .missao,
+  .sobre-page .cards-sobre .visao {
+    width: 40%;
+    height: 22rem;
+    margin-left: 1.25rem;
+    
+  }
+
+  .sobre-page .location-sobre h2,
+  .sobre-page .location-sobre p {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .sobre-page .sobre-txt{
+    padding: 2rem 2rem;
+    
+  }
+}
+
