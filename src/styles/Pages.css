@@ -246,6 +246,11 @@
 }
 
 
+.pets-dashboard{
+  font-family: 'Inter', sans-serif;
+  padding: 2rem;
+}
+
 @media screen and (max-width: 768px) {
   .sobre-page .location-sobre .galery-sobre {
     grid-template-columns: 1fr;

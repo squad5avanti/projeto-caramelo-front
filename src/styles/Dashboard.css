@@ -1,0 +1,259 @@
+
+.dashboard-main {
+  padding: 2rem 3rem;
+  font-family: 'Inter', sans-serif; 
+  background-color: #fdfbf5;
+  color: #2d2d2d;
+}
+
+.painel-user h1, .painel-admin h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.painel-user p, .painel-admin p {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.painel-user h2, .painel-admin h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* ====== Painel Admin ====== */
+.painel-admin {
+  background-color: #fdfbf5;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.visao-geral {
+  background-color: #f9f4e5;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.cards-geral {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card-dashboard {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1.25rem;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-dashboard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.card-dashboard::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #5ee290;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.card-dashboard strong {
+  display: block;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2d2d2d;
+}
+
+.card-dashboard p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.25rem;
+}
+
+
+.grid-admin {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+
+.ultimos-pets,
+.pets-adotados,
+.arrecadacoes {
+  background-color: #f9f4e5;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ultimos-pets h2,
+.pets-adotados h2,
+.arrecadacoes h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  color: #2d2d2d;
+}
+
+
+.ultimos-pets ul,
+.pets-adotados ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ultimos-pets li,
+.pets-adotados li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  padding: 0.4rem 0;
+  border-top: 1px solid #eee;
+}
+
+.ultimos-pets li:first-child,
+.pets-adotados li:first-child {
+  border-top: none;
+}
+
+
+.progress-circle {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: conic-gradient(#c97a1b 0% 86%, #e6cdb1 0%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #2d2d2d;
+  margin: 1rem auto 0;
+  font-size: 1.25rem;
+}
+
+
+/* ====== PAINEL USUÁRIO ====== */
+.painel-user .etapas-processo {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 1.5rem;
+}
+
+
+.etapas {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.etapa {
+  flex: 1;
+  text-align: center;
+  min-width: 100px;
+  font-size: 0.85rem;
+  color: #444;
+}
+
+.icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin: 0 auto 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.etapa.roxo .icon-circle {
+  background-color: #c3b7e6;
+}
+.etapa.verde .icon-circle {
+  background-color: #8be4b1;
+}
+.etapa.amarelo .icon-circle {
+  background-color: #f6d26b;
+}
+.etapa.cinza .icon-circle {
+  background-color: #dcdcdc;
+}
+
+.etapa span {
+  display: block;
+  font-weight: 500;
+}
+
+.info-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card-info {
+  flex: 1;
+  min-width: 230px;
+  background-color: #f9f4e5;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+}
+
+.card-info h3 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  color: #2d2d2d;
+}
+
+.card-info p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.card-info a {
+  color: #c97a1b;
+  text-decoration: underline;
+}
+
+
+@media (max-width: 1024px) {
+  .grid-admin {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .painel-admin {
+    padding: 0.08rem;
+  }
+
+  .grid-admin {
+    grid-template-columns: 1fr;
+  }
+
+  .card-dashboard strong {
+    font-size: 1.6rem;
+  }
+
+  .card-dashboard p {
+    font-size: 0.85rem;
+  }
+}

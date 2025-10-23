@@ -7,12 +7,16 @@ import { useState, useEffect } from 'react';
 export default function PetCard() {
   const [pets, setPets] = useState([]);
 
+  const user = JSON.parse(localStorage.getItem('user'));
+  const isAdmin = user?.usuarioadmin === true;
+
+
   const fetchPets = async () => {
     const response = await axios.get(`${import.meta.env.VITE_API_URL}/pets`)
     setPets(response.data)
   }
 
-   useEffect(() => { 
+  useEffect(() => { 
   fetchPets()}, [])
 
   console.log(pets);

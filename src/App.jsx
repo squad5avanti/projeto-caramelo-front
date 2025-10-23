@@ -9,6 +9,7 @@ import Cadastro from "./pages/Cadastro.jsx";
 import Sobre from "./pages/Sobre.jsx";
 import Contato from "./pages/Contato.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
+import Pets from "./pages/Pets.jsx";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/pets" element={<CardsDosPets />} />
+        <Route path="/listapets" element={<Pets />} />
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/sobre" element={<Sobre />} />
