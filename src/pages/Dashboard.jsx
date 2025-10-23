@@ -1,5 +1,6 @@
 import Menu from '../components/Menu.jsx';
 import '../styles/Dashboard.css';
+import { Link } from 'react-router-dom';
 
 import {
   HouseLineIcon,
@@ -138,7 +139,7 @@ function Dashboard() {
               </div>
               <div className="card-info">
                 <h3>Pets cadastrados</h3>
-                <p>Cadastre o seu pet para adoção clicando aqui.</p>
+                <p>Cadastre o seu pet para adoção <Link to="/listapets">clicando aqui</Link>.</p>
               </div>
               <div className="card-info">
                 <h3>Favoritos</h3>

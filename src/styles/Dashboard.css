@@ -211,10 +211,12 @@
 
 .card-info {
   flex: 1;
-  min-width: 230px;
+  min-width: 14rem;
   background-color: #f9f4e5;
   padding: 1rem 1.25rem;
-  border-radius: 10px;
+  border-radius: 0.75rem;
+  height: 10rem;
+
 }
 
 .card-info h3 {
