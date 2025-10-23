@@ -20,7 +20,7 @@
 
             & h1 {
                 font: var(--title);
-                font-size: 3rem;
+                font-size: 4rem;
                 line-height: 3rem;
                 color: var(--caramelo);
             }
@@ -52,8 +52,8 @@
             }
         }
         & .img-main {
-            content: url('https://ik.imagekit.io/dvu2ekrhd/caramelo/cachorro-caramelo.png?updatedAt=1760542776050');
-            width: 21rem;
+            content: url('https://ik.imagekit.io/dvu2ekrhd/caramelo/main-img.gif?updatedAt=1761236964202');
+            width: 32rem;
         }
     }
 
