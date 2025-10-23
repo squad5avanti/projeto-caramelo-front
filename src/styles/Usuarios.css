@@ -1,0 +1,79 @@
+:root {
+  --caramelo: #bd7312;
+  --bege: #f4eed8;
+  --amarelo: #fdd72c;
+  --roxo: #bfbee9;
+  --verde: #68d7b6;
+  --preto: #3c3c41;
+  --branco: #f9f6f4;
+  --input-color: #e6ded0;
+  --title: 400 1.5rem/2rem "Caprasimo", serif;
+}
+
+.container-admin {
+  font-family: "Inter", sans-serif;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+.usuarios-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.header-usuarios {
+  text-align: justify;
+  margin-right: 580px;
+}
+
+.header-usuarios h2 {
+  font: var(--title);
+  color: var(--caramelo);
+  margin-bottom: 0.5rem;
+}
+
+.header-usuarios p {
+  color: var(--preto);
+  font-size: 1rem;
+}
+.icones{
+    margin-left:  700px;
+}
+.card-admin {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--branco);
+  border: 1px solid var(--bege);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  width: 900px;
+  transition: 0.2s ease;
+}
+
+.card-admin img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.card-admin h3 {
+  color: var(--caramelo);
+  margin-bottom: 0.25rem;
+}
+
+.card-admin p {
+  color: var(--preto);
+  font-size: 0.9rem;
+}
+
+.card-admin:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 12px rgba(189, 115, 18, 0.3);
+}

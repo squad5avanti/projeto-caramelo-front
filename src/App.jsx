@@ -11,6 +11,7 @@ import Contato from "./pages/Contato.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import Perfil from "./pages/Perfil.jsx";
 import EditarPerfil from "./pages/EditarPerfil.jsx";
+import Usuarios from "./pages/Usuarios.jsx";
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/perfil" element={<Perfil />} />
         <Route path="/editarperfil" element={<EditarPerfil />} />
+        <Route path="/usuarios" element={<Usuarios />} />
       </Routes>
     </BrowserRouter>
   );

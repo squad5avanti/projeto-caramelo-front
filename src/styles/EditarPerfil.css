@@ -1,29 +1,186 @@
-.perfil{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 50px;
-    
-}
-img{
-    height: 100px;
-    width: 100px;
-}
-.editar-descrição{
-    border: 3px solid #ca2d2d;
-    border-radius: 15px;
-    border-color: #ca2d2d;
-    width: 200px;
-    height: 400px;
-    padding-left: 30px;
-    padding-top: 30px;
+:root {
+  --caramelo: #bd7312;
+  --bege: #f4eed8;
+  --amarelo: #fdd72c;
+  --roxo: #bfbee9;
+  --verde: #68d7b6;
+  --preto: #3c3c41;
+  --branco: #f9f6f4;
+  --input-color: #e6ded0;
+  --title: 400 1.5rem/2rem "Caprasimo", serif;
 }
 
-.editar-perfil{
-    border: 3px solid #030303;
-    border-radius: 15px;
-    border-color: var(--bege);
-    width: 600px;
-    height: 400px;
-    padding-left: 50px;
+
+
+.perfil {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4rem;
+  padding: 2rem;
+  font-family: "Inter", sans-serif;
+  margin-top: 50px;
+}
+.nome-usuario{
+    margin-top: 25px;
+    font-weight: 700;
+    font-size: 30px;
+}
+.perfil-editar{
+    font-weight: 800;
+    margin-bottom: 25px;
+    font-size: 25px;
+}
+.editar-descricao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.edit-descricao{
+  
+   height: 510px;          /* altura fixa igual à outra div */
+  width: 300px;            /* ou a largura que desejar */
+  overflow-wrap: break-word; /* quebra palavras longas */
+  word-wrap: break-word;     /* compatibilidade */
+  overflow: hidden;       /* esconde o que passar do limite */
+  padding: 10px;
+  background-color: var(--branco);
+  text-align: justify;
+}
+
+.parag-descricao p{
+    margin-right: 130px;
+    
+    line-height: 1rem;
+}
+.editar-descricao img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.editar-perfil {
+  background-color: var(--branco);
+  padding: 5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+}
+
+.form-editar-perfil {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-editar-perfil label {
+  font-weight: 500;
+}
+
+.form-editar-perfil input {
+  padding: 8px;
+  border: 1px solid var(--bege);
+  border-radius: 6px;
+}
+
+input:focus {
+  border-color: var(--caramelo);
+  background-color: var(--bege);
+  outline: none;
+}
+
+.erro {
+  color: red;
+  font-size: 0.85rem;
+}
+
+.sexo-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: var(--preto);
+  position: relative;
+  cursor: pointer;
+}
+
+.radio-label input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+}
+
+.custom-radio {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--caramelo);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.radio-label input[type="radio"]:checked + .custom-radio::after {
+  content: "✓";
+  color: var(--caramelo);
+  font-size: 14px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+
+.radio-label:hover .custom-radio {
+  box-shadow: 0 0 5px rgba(189, 115, 18, 0.3);
+}
+
+/* === BOTÕES === */
+
+.botoes-editar {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-salvar {
+  background-color: var(--caramelo);
+  color: var(--bege);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-salvar:hover {
+  background-color: var(--verde);
+  color: var(--branco);
+}
+
+.btn-cancelar {
+  background-color: transparent;
+  color: var(--caramelo);
+  border: 2px solid var(--caramelo);
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-left: 250px;
+}
+
+.btn-cancelar:hover {
+  background-color: var(--caramelo);
+  color: var(--bege);
 }

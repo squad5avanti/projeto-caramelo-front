@@ -3,7 +3,15 @@
     background-image: url(https://ik.imagekit.io/dvu2ekrhd/caramelo/background.svg?updatedAt=1760544058180);
     font-family: 'Inter', sans-serif;
 }
-
+::-webkit-scrollbar-track {
+    background-color: #bd73129c;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--caramelo);
+}
 .main-home {
     & .info-main {
         display: flex;
