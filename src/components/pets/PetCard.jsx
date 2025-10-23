@@ -4,7 +4,7 @@ import { CatIcon, GenderMaleIcon, PawPrintIcon, ShieldCheckIcon, ShieldWarningIc
 import { useState, useEffect } from 'react';
 
 
-export default function CardPets() {
+export default function PetCard() {
   const [pets, setPets] = useState([]);
 
   const fetchPets = async () => {
@@ -68,6 +68,7 @@ export default function CardPets() {
                 <p><span>Peso:</span>{pet.peso}kg</p>
                 <p><span>Porte:</span>{pet.tamanho}</p>
                 <p><span>Descrição:</span>{pet.descricao}</p>
+                {/* <p>Fotos:</p><img src={pet.fotos} alt="" width={200}/> */}
               </section>
             <div className='card-pet-adotar'>
               <button>ADOTAR</button>

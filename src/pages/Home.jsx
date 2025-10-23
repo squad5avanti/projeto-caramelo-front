@@ -2,6 +2,7 @@ import '../styles/Home.css'
 import Footer from '../components/Footer.jsx'
 import Header from '../components/Header.jsx'
 import Reviews from '../components/Reviews.jsx'
+import { Link } from 'react-router-dom';
 
 
 function Home() {
@@ -18,7 +19,7 @@ function Home() {
               <p>Transforme vidas com um gesto de carinho.
                 Conheça o Projeto Caramelo e encontre seu
                 novo melhor amigo.</p>
-              <button>Adotar</button>
+              <Link to="/pets" className="button-home">Conhecer Pets</Link>
             </div>
             <div className='img-main'></div>
           </section>
@@ -64,7 +65,7 @@ function Home() {
               </div>
 
               <div className="adopt-card-3">
-                <p>Reserve o animal desejado, e aguarde a apovação do formulário. Depois disso venha até a unidade conhecer o seu novo amigo!</p>
+                <p>Reserve o animal desejado, e aguarde a aprovação do formulário. Depois disso venha até a unidade conhecer o seu novo amigo!</p>
               </div>
 
             </div>

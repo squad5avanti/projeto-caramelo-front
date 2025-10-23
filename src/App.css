@@ -8,7 +8,7 @@
     --caramelo: #BD7312;
     --bege: #F4EED8;
     --amarelo: #FDD72C;
-    --roxo: #DEDDFF;
+    --roxo: #bfbee9;
     --verde: #68D7B6;
     --preto: #3C3C41;
     --branco: #F9F6F4;
@@ -34,7 +34,7 @@ html, body {
     display: flex; 
     width: 100%;
     height: 100vh;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', sans-serif; 
 }
 
 /* ------------------------------------------- */
@@ -97,6 +97,11 @@ html, body {
 .imagem {
     max-width: 60%; 
     height: auto;
+}
+
+.acesso-login{
+    margin: 0 auto;
+    margin-top: 2rem;
 }
 
 /* -------------------------- */

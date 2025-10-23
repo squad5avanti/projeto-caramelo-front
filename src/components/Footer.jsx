@@ -11,10 +11,10 @@ export default function Footer() {
             <h2>Projeto Caramelo</h2>
             <p>Adotar é um ato de amor, dê uma <br></br> nova chance a um caramelo!</p>
             <div className='icons'>
-              <FacebookLogoIcon size={32} />
-              <InstagramLogoIcon size={32} />
-              <LinkedinLogoIcon size={32} />
-              <YoutubeLogoIcon size={32} />
+              <FacebookLogoIcon size={32} className='facebook' />
+              <InstagramLogoIcon size={32} className='instagram'/>
+              <LinkedinLogoIcon size={32} className='linkedin'/>
+              <YoutubeLogoIcon size={32} className='youtube'/>
             </div>
           </div>
           <div className='address'>
