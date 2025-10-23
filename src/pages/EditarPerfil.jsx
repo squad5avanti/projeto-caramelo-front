@@ -55,7 +55,8 @@ export default function EditarPerfil() {
       setErrors({});
     }
   };
-
+ 
+  
   return (
     <>
       <Menu />
@@ -66,7 +67,7 @@ export default function EditarPerfil() {
             src="https://i.ibb.co/4nxcGh4j/adventure-time-pictures-x4vl1efzqfne2p8u-fotor-20251017152312.png"
             alt="Foto do usuário"
           />
-          <p className = "nome-usuario">Nome do usuário</p>
+          <p className = "nome-usuario">Jake</p>
           <div className = "edit-descricao">
             <p className = "parag-descricao">Olá!
               Eu sou o Jake, 
@@ -92,7 +93,7 @@ export default function EditarPerfil() {
               name="nome"
               value={form.nome}
               onChange={handleChange}
-            />
+            placeholder="Digite seu nome completo"/>
             {errors.nome && <p className="erro">{errors.nome}</p>}
 
             <label>Telefone:</label>
@@ -101,7 +102,7 @@ export default function EditarPerfil() {
               name="telefone"
               value={form.telefone}
               onChange={handleChange}
-            />
+            placeholder="Digite seu telefone"/>
             {errors.telefone && <p className="erro">{errors.telefone}</p>}
 
             <label>Email:</label>
@@ -110,7 +111,7 @@ export default function EditarPerfil() {
               name="email"
               value={form.email}
               onChange={handleChange}
-            />
+            placeholder="Digite seu email"/>
             {errors.email && <p className="erro">{errors.email}</p>}
 
             <label>Senha:</label>
@@ -119,7 +120,7 @@ export default function EditarPerfil() {
               name="senha"
               value={form.senha}
               onChange={handleChange}
-            />
+            placeholder="*************"/>
             {errors.senha && <p className="erro">{errors.senha}</p>}
 
             <div className="sexo-container">

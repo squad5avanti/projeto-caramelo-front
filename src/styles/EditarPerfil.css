@@ -34,12 +34,11 @@
 .editar-descricao {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  
+  text-align: justify;
 }
 .edit-descricao{
-  
-   height: 510px;          /* altura fixa igual à outra div */
+  height: 510px;          /* altura fixa igual à outra div */
   width: 300px;            /* ou a largura que desejar */
   overflow-wrap: break-word; /* quebra palavras longas */
   word-wrap: break-word;     /* compatibilidade */
@@ -84,6 +83,7 @@
   padding: 8px;
   border: 1px solid var(--bege);
   border-radius: 6px;
+  height: 45px;
 }
 
 input:focus {

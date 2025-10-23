@@ -30,14 +30,11 @@ export default function Usuarios() {
 <div className="usuarios-lista">
   {usuarios.map(usuarios => (
     <div className="card-admin" key={usuarios.id}>
-        
         <img src={usuarios.foto} alt={usuarios.nome} />
-      
       <div>
         <h3>{usuarios.nome}</h3>
-        
         <p>Função: {usuarios.funcao}</p>
-        
+
         <div className="icones" >
             <MdEditNote  size={24}/> 
             <IoTrashOutline size={24}/>
