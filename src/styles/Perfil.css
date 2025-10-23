@@ -1,0 +1,92 @@
+.body-home {
+    background-image: url(https://ik.imagekit.io/dvu2ekrhd/caramelo/background.svg?updatedAt=1760544058180);
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --caramelo: #BD7312;
+    --bege: #F4EED8;
+    --amarelo: #FDD72C;
+    --roxo: #bfbee9;
+    --verde: #68D7B6;
+    --preto: #3C3C41;
+    --branco: #F9F6F4;
+    --input-color: #E6DED0;
+
+    --title: 400 1.5rem/2rem "Caprasimo", serif;
+}
+
+.perfil-container {
+    display: flex;
+    justify-content: left;
+    padding-left: 60px;
+    padding-top: 10px;
+}
+
+.etapas {
+    font: var(--title);
+    color: var(--caramelo);
+    padding-top: 15px;
+    padding-bottom: 25px;
+    
+}
+
+.botoes_perfil_usuario {
+    display: flex;
+    gap: 80px;
+    border: 3px solid #030303;
+    padding: 40px;
+    border-radius: 15px;
+    border-color: var(--bege);
+}
+
+/* Cada "etapa" (antes eram botões) */
+.etapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+/* Ícones */
+.etapa svg {
+    font-size: 2rem;
+    color: var(--verde);
+}
+
+/* Texto das etapas */
+.etapa span {
+    text-align: center;
+    font-weight: 600;
+    color: var(--preto);
+}
+
+.div2{
+    display: flex;
+    flex-direction: row;
+    padding-top: 25px;
+    justify-content: space-between;
+}
+
+.historico, .cadastro, .favorito{
+    border-radius: 20px;
+    background-color: var(--bege);
+    width: 300px;
+    height: 180px;
+    padding: 30px 0px 25px 15px;
+}
+.hist, .cads, .fav{
+    font-size: 20px;
+    padding-bottom: 20px;
+    font-weight: 800;
+}
+.historico{
+    font-size: smaller;
+}
+
+.verpets{
+    padding-top: 50px;
+}
