@@ -10,6 +10,7 @@ import Sobre from "./pages/Sobre.jsx";
 import Contato from "./pages/Contato.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import Perfil from "./pages/Perfil.jsx";
+import EditarPerfil from "./pages/EditarPerfil.jsx";
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="/contato" element={<Contato />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/perfil" element={<Perfil />} />
+        <Route path="/editarperfil" element={<EditarPerfil />} />
       </Routes>
     </BrowserRouter>
   );
