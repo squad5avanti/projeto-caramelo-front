@@ -4,7 +4,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { UserCircleIcon, MagnifyingGlassIcon, DoorOpenIcon } from '@phosphor-icons/react';
 
 function Menu() {
-  // Verifica se o usuário está logado
   const navigate = useNavigate();
 
   const isAuthenticated = () => {
@@ -12,18 +11,14 @@ function Menu() {
     return !!token;
   };
 
-  const getUser = () => {
-    const user = localStorage.getItem('user');
-    return user ? JSON.parse(user) : null;
-  };
+  const user = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null;
+  const isAdmin = user?.usuarioadmin === true;
 
   const handleLogout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
     navigate('/');
   };
-
-  const user = getUser();
 
   return (
     <div className='menu-sistema'>
@@ -33,8 +28,12 @@ function Menu() {
 
       <nav>
         <Link to="/dashboard">Menu</Link>
-        <Link to="/adotantes">Adotantes</Link>
-        <Link to="/adotados">Adotados</Link>
+        {isAdmin && (
+          <>
+            <Link to="/adotantes">Adotantes</Link>
+            <Link to="/adotados">Adotados</Link>
+          </>
+        )}
         <Link to="/listapets">Pets</Link>
       </nav>
 

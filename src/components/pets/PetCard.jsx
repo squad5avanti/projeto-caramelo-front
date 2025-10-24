@@ -2,6 +2,7 @@ import axios from 'axios';
 import '../../styles/Components.css'
 import { CatIcon, GenderMaleIcon, PawPrintIcon, ShieldCheckIcon, ShieldWarningIcon, SyringeIcon } from '@phosphor-icons/react'
 import { useState, useEffect } from 'react';
+import ModalPetCard from './ModalPetCard.jsx'
 
 
 export default function PetCard() {
@@ -10,14 +11,36 @@ export default function PetCard() {
   const user = JSON.parse(localStorage.getItem('user'));
   const isAdmin = user?.usuarioadmin === true;
 
+  const [selectedPet, setSelectedPet] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+
+  const handleOpenModal = (pet) => {
+    setSelectedPet(pet);
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedPet(null);
+    setShowModal(false);
+  };
+
+  const updatePetInState = (updatedPet) => {
+  setPets(prev =>
+    prev.map(p => p.id === updatedPet.id ? updatedPet : p)
+  );
+};
 
   const fetchPets = async () => {
-    const response = await axios.get(`${import.meta.env.VITE_API_URL}/pets`)
-    setPets(response.data)
-  }
+  const token = localStorage.getItem("token");
+  const response = await axios.get(`${import.meta.env.VITE_API_URL}/pets`, {
+    headers: { Authorization: `Bearer ${token}` }
+  });
+  setPets(response.data);
+};
 
   useEffect(() => { 
-  fetchPets()}, [])
+  fetchPets()}, []);
+
 
   console.log(pets);
   return (
@@ -75,7 +98,7 @@ export default function PetCard() {
                 {/* <p>Fotos:</p><img src={pet.fotos} alt="" width={200}/> */}
               </section>
             <div className='card-pet-adotar'>
-              <button>ADOTAR</button>
+              <button onClick={() => handleOpenModal(pet)}>Ver mais</button>
             </div>
             </main>
           </div>
@@ -83,7 +106,9 @@ export default function PetCard() {
         ))}
         
       </div>
-      
+      {showModal && selectedPet && (
+          <ModalPetCard pet={selectedPet} onClose={handleCloseModal} isAdmin={isAdmin} updatePetInState={updatePetInState}  />
+      )} 
       
     </>
   )

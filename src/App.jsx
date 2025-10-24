@@ -10,6 +10,9 @@ import Sobre from "./pages/Sobre.jsx";
 import Contato from "./pages/Contato.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import Pets from "./pages/Pets.jsx";
+import PetForm from "./components/pets/PetForm.jsx";
+import Adotantes from "./pages/Adotantes.jsx";
+import Adocoes from "./pages/Adocoes.jsx";
 
 export default function App() {
   return (
@@ -23,6 +26,10 @@ export default function App() {
         <Route path="/sobre" element={<Sobre />} />
         <Route path="/contato" element={<Contato />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/pets/novo" element={<PetForm />} />
+        <Route path="/adotantes" element={<Adotantes />} />
+        <Route path="/adotados" element={<Adocoes />} />
+
       </Routes>
     </BrowserRouter>
   );

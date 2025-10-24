@@ -220,3 +220,11 @@
     }
     
 }
+
+@media screen and (max-width: 750px) {
+
+    .main-home{
+        padding-left: 1rem;
+    }
+    
+}
