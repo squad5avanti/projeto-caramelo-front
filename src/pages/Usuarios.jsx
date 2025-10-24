@@ -1,5 +1,6 @@
 import { MdEditNote } from "react-icons/md";
 import { IoTrashOutline } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 
 import Menu from "../components/Menu.jsx";
 import "../styles/Components.css";
@@ -36,7 +37,10 @@ export default function Usuarios() {
         <p>Função: {usuarios.funcao}</p>
 
         <div className="icones" >
+          <Link to="/editarperfil">
             <MdEditNote  size={24}/> 
+          </Link>
+            
             <IoTrashOutline size={24}/>
         </div>
       </div>

@@ -108,7 +108,7 @@ function Dashboard() {
               {ultimosPets.length > 0 ? (
                 ultimosPets.map(pet => (
                   <li key={pet.id}>
-                    {pet.avatar} <strong>{pet.nome}</strong> {pet.especie}
+                    <img src={pet.avatar} alt="" width={100} /><strong>{pet.nome}</strong> {pet.especie}
                   </li>
                 ))
               ) : (
@@ -123,7 +123,7 @@ function Dashboard() {
               {ultimosPetsAdotados.length > 0 ? (
                 ultimosPetsAdotados.map(pet => (
                   <li key={pet.id}>
-                    {pet.avatar} <strong>{pet.nome}</strong> {pet.especie}
+                    <img src={pet.avatar} alt="" width={100} /> <strong>{pet.nome}</strong> {pet.especie}
                   </li>
                 ))
               ) : (

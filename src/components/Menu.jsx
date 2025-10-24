@@ -44,10 +44,13 @@ function Menu() {
 
       {isAuthenticated() ? (
         <>
-          <div className="perfil-menu">
+        <Link to="/usuarios">
+            <div className="perfil-menu">
             <UserCircleIcon size={21} />
             <p>Olá, {user?.nome}</p>
           </div>
+          </Link>
+          
           <div className='sair-menu' onClick={handleLogout}>
             <p>Sair</p>
             <DoorOpenIcon size={21}/>
