@@ -1,7 +1,7 @@
 // === IMPORTAÇÕES ===
 import Header from '../components/Header.jsx'
 import Footer from '../components/Footer.jsx'
-import PetCard from '../components/pets/PetCard.jsx';
+import PetCardDisponiveis from '../components/pets/PetCardDisponiveis.jsx';
 
 import '../styles/CardsDosPets.css'
 
@@ -19,7 +19,7 @@ function CardsDosPets() {
           Veja os pets disponíveis para adoção:
         </p>
       </section>
-      <PetCard />
+      <PetCardDisponiveis />
       <Footer />
     </>
   );
