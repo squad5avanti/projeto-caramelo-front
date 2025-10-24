@@ -342,11 +342,223 @@
         display: flex;
         gap: .5rem;
         color: var(--bege);
+        cursor: pointer;
     }
 }
+
+
+.pets-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 4rem;
+
+  & .btn-add-pet {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background-color: var(--caramelo);
+        color: var(--bege);
+        font-weight: 600;
+        border: 2px solid var(--caramelo);
+        padding: 10px 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: ease-in .2s;
+    }
+
+    & .btn-add-pet:hover {
+        background-color: #fff;
+        color: var(--caramelo);
+        border: 2px solid var(--caramelo);
+        scale: 1.1;
+    }
+}
+
+.form-container-pets{
+    font-family: 'Inter', sans-serif; 
+    
+    & h2{
+        font: var(--title);
+        color: var(--caramelo);
+        text-align: center;
+        margin-top: 4rem;
+        font-size: 2rem;
+    }
+
+    & .form-new-pet{
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+
+        max-width: 30rem;
+        margin: 2.5rem auto;
+
+        & input, textarea, select{
+            padding: 0.75rem;
+            background-color: #f4eed857;
+            border-radius: .5rem;
+            border: none;
+        }
+
+        & .cadastrar-pets-btn{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            & button {
+                padding: 1rem;
+                border-radius: 0.5rem;
+                
+                width: 14rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                transition: ease-in 0.2s;
+                cursor: pointer;
+            }
+
+             & .cancelar{
+                    color: var(--branco);
+                    background-color: var(--amarelo);
+                    border: 2px solid var(--amarelo);
+
+                    &:hover{
+                    background-color: #fff;
+                    border: 2px solid var(--amarelo);
+                    color: var(--amarelo);
+                }
+                }
+
+            & .save{
+                color: var(--branco);
+                background-color: var(--verde);
+                border: 2px solid var(--verde);
+
+                &:hover{
+                    background-color: #fff;
+                    border: 2px solid var(--verde);
+                    color: var(--verde);
+                }
+            }
+
+            
+
+        }
+    }
+}
+
+
+
 
 @media screen and (min-width: 1200px){
     .header{
         height: 10rem;
     }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .menu-sistema {
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+  }
+
+  .menu-sistema .busca {
+    width: 14rem;
+  }
+
+  .menu-sistema nav {
+    gap: 1.25rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .menu-sistema {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  /* Oculta menu padrão e busca em telas pequenas */
+  .menu-sistema nav,
+  .menu-sistema .busca {
+    display: none;
+  }
+
+  /* Ícone de menu (hamburger) */
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bege);
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+
+  /* Menu mobile */
+  .menu-sistema.active nav {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--caramelo);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    gap: 1rem;
+    padding: 1rem 0;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .menu-sistema.active .busca {
+    display: flex;
+    width: 90%;
+    margin: 0.5rem auto 1rem;
+  }
+
+  .header {
+        height: auto;
+        padding: 1rem 0;
+        background-image: url('../assets/bg-mobile-h.svg');
+        background-size: contain;
+        width: 100%;
+        
+    }
+
+    .header .info-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        
+    }
+
+    .header .logo-header {
+        width: 6rem;
+        margin-bottom: 1rem;
+    }
+
+    .header .nav {
+        flex-direction: column;
+        gap: 0.25rem;
+        width: 100%;
+        
+    }
+
+    .header .btn-header button {
+        width: 100%;
+        max-width: 12rem;
+        margin-top: 0.75rem;
+    }
+}
+
+/* Animação suave do menu mobile */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
