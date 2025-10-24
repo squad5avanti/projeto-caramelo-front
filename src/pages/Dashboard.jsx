@@ -1,6 +1,8 @@
 import Menu from '../components/Menu.jsx';
 import '../styles/Dashboard.css';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { useState, useEffect, useMemo } from 'react';
 
 import {
   HouseLineIcon,
@@ -11,8 +13,66 @@ import {
 } from "@phosphor-icons/react";
 
 function Dashboard() {
+
+  const [pets, setPets] = useState([]);
+
+  const fetchPets = async () => {
+    const response = await axios.get(`${import.meta.env.VITE_API_URL}/pets`)
+    setPets(response.data)
+  }
+
+  const totalAdotados = useMemo(() => {
+    return pets.filter(pet => pet.estado === "adotado").length;
+  }, [pets]);
+
+  const totalVacinados = useMemo(() => {
+    return pets.filter(pet => pet.vacinado === true).length;
+  }, [pets]);
+
+  const totalPendentes = useMemo(() => {
+    return pets.filter(pet => pet.situacao === "pendente").length;
+  }, [pets]);
+
+  const ultimosPets = useMemo(() => {
+    const petsCopia = [...pets];
+
+    const petsOrdenados = petsCopia.sort((a, b) => b.id - a.id);
+
+    return petsOrdenados.slice(0, 3);
+
+  }, [pets]);
+
+  const ultimosPetsAdotados = useMemo(() => {
+    const petsCopia2  = [...pets];
+
+    const petsCopiaAdotados = petsCopia2.filter(pet => pet.estado === 'adotado');
+
+    const petsOrdenadosAdotados = petsCopiaAdotados.sort((a, b) => b.id - a.id);
+
+    return petsOrdenadosAdotados.slice(0, 3);
+
+  }, [pets]);
+
+  console.log("Últimos 3 pets:", ultimosPets);
+
+  console.log(pets);
+
+  useEffect(() => { 
+  fetchPets()}, [])
+
   const user = JSON.parse(localStorage.getItem("user")) || {};
   const isAdmin = user?.usuarioadmin === true;
+  const [adocoes, setAdocoes] = useState([]);
+
+  const fetchAdocoes = async () => {
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/adocoes`)
+      setAdocoes(response.data)
+    }
+
+  useEffect(() => { 
+  fetchAdocoes()}, [])
+
+  console.log(adocoes);
 
   return (
     <>
@@ -27,19 +87,15 @@ function Dashboard() {
               <h2>Visão geral</h2>
               <div className="cards-geral">
                 <div className="card-dashboard">
-                  <strong>12</strong>
+                  <strong>{totalAdotados}</strong>
                   <p>Adotados este mês</p>
                 </div>
                 <div className="card-dashboard">
-                  <strong>32</strong>
-                  <p>Adoções pendentes</p>
-                </div>
-                <div className="card-dashboard">
-                  <strong>08</strong>
+                  <strong>{totalVacinados}</strong>
                   <p>Vacinados</p>
                 </div>
                 <div className="card-dashboard">
-                  <strong>02</strong>
+                  <strong>{totalPendentes}</strong>
                   <p>Cadastros pendentes</p>
                 </div>
               </div>
@@ -49,32 +105,31 @@ function Dashboard() {
               <div className="ultimos-pets">
                 <h2>Últimos pets cadastrados</h2>
                 <ul>
-                  <li>
-                    <span>Lola</span>
-                    <span>4 anos</span>
-                    <span>Adotante</span>
+              {ultimosPets.length > 0 ? (
+                ultimosPets.map(pet => (
+                  <li key={pet.id}>
+                    {pet.avatar} <strong>{pet.nome}</strong> {pet.especie}
                   </li>
-                  <li>
-                    <span>Lola</span>
-                    <span>4 anos</span>
-                    <span>Adotante</span>
-                  </li>
-                  <li>
-                    <span>Lola</span>
-                    <span>4 anos</span>
-                    <span>Adotante</span>
-                  </li>
-                </ul>
+                ))
+              ) : (
+                <p>Nenhum pet cadastrado ainda.</p>
+              )}
+            </ul>
               </div>
 
               <div className="pets-adotados">
                 <h2>Últimos pets adotados</h2>
                 <ul>
-                  <li>
-                    <span>Lola</span>
-                    <span>Adotante</span>
+              {ultimosPetsAdotados.length > 0 ? (
+                ultimosPetsAdotados.map(pet => (
+                  <li key={pet.id}>
+                    {pet.avatar} <strong>{pet.nome}</strong> {pet.especie}
                   </li>
-                </ul>
+                ))
+              ) : (
+                <p>Nenhum pet adotado ainda.</p>
+              )}
+            </ul>
               </div>
 
               <div className="arrecadacoes">
