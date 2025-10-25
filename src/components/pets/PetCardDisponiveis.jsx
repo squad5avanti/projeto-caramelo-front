@@ -8,11 +8,9 @@ import ModalPetCard from './ModalPetCard.jsx'
 export default function PetCardDisponiveis() {
   const [pets, setPets] = useState([]);
 
-  /*
   const user = JSON.parse(localStorage.getItem('user'));
   const isAdmin = user?.usuarioadmin === true;
-  */
-
+  
   const [selectedPet, setSelectedPet] = useState(null);
   const [showModal, setShowModal] = useState(false);
 

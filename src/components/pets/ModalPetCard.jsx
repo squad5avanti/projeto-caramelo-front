@@ -170,7 +170,7 @@ export default function ModalPetCard({ pet, onClose, isAdmin, updatePetInState }
                   </button>
                 </div>
               </div>
-              <img src={pet.fotos} alt={pet.nome} className="pet-large" />
+              <img src={pet.avatar} alt={pet.nome} className="pet-large" />
             </div>
           </>
         )}
