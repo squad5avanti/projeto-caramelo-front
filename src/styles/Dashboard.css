@@ -94,7 +94,7 @@
 
 .ultimos-pets,
 .pets-adotados,
-.arrecadacoes {
+.ultimas-adocoes {
   background-color: #f9f4e5;
   border-radius: 12px;
   padding: 1.5rem;
@@ -105,7 +105,7 @@
 
 .ultimos-pets h2,
 .pets-adotados h2,
-.arrecadacoes h2 {
+.ultimas-adocoes h2 {
   margin-bottom: 0.75rem;
   font-size: 1.1rem;
   color: #2d2d2d;

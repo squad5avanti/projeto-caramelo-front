@@ -84,14 +84,27 @@ function Dashboard() {
   );
 }, [adocoes, adotantes]);
 
-  console.log(historicoAdocoes);
+const ultimasAdocoes = useMemo(() => {
+    const adocoesCopia = [...adocoes];
 
+    const adocoesOrdenadas = adocoesCopia.sort((a, b) => b.id - a.id);
+
+    return adocoesOrdenadas.slice(0, 3);
+
+  }, [adocoes]);
   const mapaDePets = useMemo(() => {
   return pets.reduce((acc, pet) => {
     acc[pet.id] = pet.nome;
     return acc;
   }, {});
 }, [pets]);
+
+const mapaDeAdotantes = useMemo(() => {
+  return adotantes.reduce((acc, adotante) => {
+    acc[adotante.id] = adotante.nome;
+    return acc;
+  }, {});
+}, [adotantes]);
 
   return (
     <>
@@ -151,14 +164,27 @@ function Dashboard() {
             </ul>
               </div>
 
-              <div className="arrecadacoes">
-                <h2>Arrecadações</h2>
-                <div className="progress-circle">
-                  <span>86%</span>
-                </div>
+              <div className="ultimas-adocoes">
+                <h2>Últimas adoções</h2>
+                {ultimasAdocoes.length > 0 ? (
+                  <ul>
+                    {ultimasAdocoes.map(adocao => (
+                      <li key={adocao.id}>
+                      {new Date(adocao.data_adocao).toLocaleDateString('pt-BR', {timeZone: 'UTC'})}
+                      <br></br>
+                      <p>{mapaDePets[adocao.pets_id] || 'Nome não encontrado'} por {mapaDeAdotantes[adocao.adotantes_id] || 'Nome não encontrado'}</p>
+                      <br></br>
+                      <br></br> 
+                      </li>
+                    ))}
+    </ul>
+  ) : (
+    <p>Nenhum histórico de adoção encontrado.</p>
+  )}
               </div>
             </div>
           </section>
+
 
         ) : (
           // Painel Usuário
