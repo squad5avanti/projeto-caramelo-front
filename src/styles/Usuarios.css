@@ -1,14 +1,4 @@
-:root {
-  --caramelo: #bd7312;
-  --bege: #f4eed8;
-  --amarelo: #fdd72c;
-  --roxo: #bfbee9;
-  --verde: #68d7b6;
-  --preto: #3c3c41;
-  --branco: #f9f6f4;
-  --input-color: #e6ded0;
-  --title: 400 1.5rem/2rem "Caprasimo", serif;
-}
+
 
 .container-admin {
   font-family: "Inter", sans-serif;

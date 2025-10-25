@@ -68,14 +68,14 @@ margin-right: 50px;
   font-size: 30px;
   font-weight: 400;
   color: var(--preto);
-  font-family: 'Caprasimo', serif; /* sua fonte */
+  font-family: 'Caprasimo', serif;
   text-align: left;
 }
 
 .nome_pet-tipo {
   font-size: 15px;
   color: var(--preto);
-  font-family: 'Inter', sans-serif; /* outra fonte se quiser */
+  font-family: 'Inter', sans-serif;
   text-align: left;
 }
 
@@ -85,8 +85,8 @@ margin-right: 50px;
 /* === 8. INFORMAÇÕES PRINCIPAIS (ALINHADAS COM ÍCONES) === */
 .informacoes-alinhadas {
   display: flex;
-  justify-content: space-around; /* distribui as 3 colunas igualmente */
-  align-items: center;           /* centraliza verticalmente cada coluna */
+  justify-content: space-around; 
+  align-items: center;          
   margin: 15px 0;
   background-color: var(--bege);
   border-radius: 8px;
@@ -95,9 +95,9 @@ margin-right: 50px;
 
 .info-coluna {
   display: flex;
-  flex-direction: column; /* ícone em cima do texto */
-  align-items: center;    /* centraliza horizontalmente cada coluna */
-  gap: 5px;               /* espaço entre ícone e texto */
+  flex-direction: column; 
+  align-items: center; 
+  gap: 5px; 
   color: var(--caramelo);
 }
 

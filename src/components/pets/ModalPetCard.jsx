@@ -24,7 +24,7 @@ export default function ModalPetCard({ pet, onClose, isAdmin, updatePetInState }
     const confirmDelete = confirm(`Tem certeza que deseja deletar ${pet.nome}?`);
     if (!confirmDelete) return;
 
-    console.log("🟡 Tentando deletar pet com ID:", pet.id);
+   
     try {
       await deletePet(pet.id);
       alert("Pet deletado com sucesso!");

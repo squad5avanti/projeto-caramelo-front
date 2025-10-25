@@ -16,7 +16,7 @@
     --caramelo: #BD7312;
     --bege: #F4EED8;
     --amarelo: #FDD72C;
-    --roxo: #bfbee9;
+    --roxo: #c3b7e6;
     --verde: #68D7B6;
     --preto: #3C3C41;
     --branco: #F9F6F4;
@@ -218,6 +218,43 @@ html, body {
 
 .formLogin a:hover {
     color: var(--preto);
+}
+
+form .input-container{
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    
+
+    .input-container input {
+        width: 100%;
+        padding: 10px 40px 10px 12px;
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        outline: none;
+        transition: border-color 0.2s ease;
+    }
+
+    .togglePassword {
+        position: absolute;
+        right: 10px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--caramelo);
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: color 0.2s ease;
+    }
+
+    .togglePassword:hover {
+    color: #555;
+    }
+
 }
 .access{
     align-self: center;

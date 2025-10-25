@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
+import '../App.css';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { authService } from '../services/auth';
-import '../App.css';
 import { Link } from 'react-router-dom';
+import { EyeIcon, EyeSlashIcon } from '@phosphor-icons/react';
 
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
     
     const navigate = useNavigate(); // ← Hook do React Router
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -19,6 +22,7 @@ function Login() {
 
         try {
             const response = await authService.login(email, password);
+            localStorage.setItem("token", response.token);
             console.log('Login bem-sucedido:', response);
             navigate('/dashboard');
             
@@ -70,17 +74,26 @@ function Login() {
                                 disabled={loading}
                             />
                             
-                            <label htmlFor="password">Senha</label>
+                            <label htmlFor="senha">Senha</label>
                             <div className="input-container">
-                                <input 
-                                    type="password" 
-                                    id="password" 
-                                    placeholder="Digite sua senha" 
-                                    value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
-                                    required
-                                    disabled={loading}
-                                />
+                            <input
+                                type={showPassword ? "text" : "password"}
+                                name="senha"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                placeholder="Digite sua senha"
+                                minLength="8"
+                                maxLength="12"
+                                required
+                            />
+                            <button
+                                type="button"
+                                className="togglePassword"
+                                onClick={() => setShowPassword(!showPassword)}
+                                aria-label={showPassword ? "Ocultar senha" : "Mostrar senha"}
+                            >
+                                {showPassword ? <EyeSlashIcon size={22} /> : <EyeIcon size={22} />}
+                            </button>
                             </div>
                             
                             <a href="/">Esqueci minha senha</a>

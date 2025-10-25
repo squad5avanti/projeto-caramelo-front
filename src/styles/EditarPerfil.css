@@ -1,17 +1,3 @@
-:root {
-  --caramelo: #bd7312;
-  --bege: #f4eed8;
-  --amarelo: #fdd72c;
-  --roxo: #bfbee9;
-  --verde: #68d7b6;
-  --preto: #3c3c41;
-  --branco: #f9f6f4;
-  --input-color: #e6ded0;
-  --title: 400 1.5rem/2rem "Caprasimo", serif;
-}
-
-
-
 .perfil {
   display: flex;
   justify-content: center;
@@ -39,10 +25,10 @@
 }
 .edit-descricao{
   height: 510px;          /* altura fixa igual à outra div */
-  width: 300px;            /* ou a largura que desejar */
+  width: 300px;           
   overflow-wrap: break-word; /* quebra palavras longas */
   word-wrap: break-word;     /* compatibilidade */
-  overflow: hidden;       /* esconde o que passar do limite */
+  overflow: hidden;       
   padding: 10px;
   background-color: var(--branco);
   text-align: justify;

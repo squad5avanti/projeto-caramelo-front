@@ -121,7 +121,7 @@
 /* DETALHES COM ÍCONES (Vacinado, Sexo, Idade) - Novo estilo de badges */
 .details-pets-modal {
     display: flex;
-    justify-content: space-around; /* Distribui o espaço entre os itens */
+    justify-content: space-around; 
     gap: 0.5rem;
     margin-bottom: 1.5rem;
     padding: 1rem 0;
@@ -169,7 +169,7 @@
 
 /* SITUAÇÃO (Rodapé Esquerdo) */
 .pet-situation-footer {
-    margin-top: auto; /* Empurra para o final */
+    margin-top: auto; 
     padding-top: 1rem;
     display: flex;
     flex-direction: column;
@@ -187,7 +187,7 @@
     border-radius: 30px;
     font-size: 1rem;
     font-weight: bold;
-    color: #333; /* Texto padrão */
+    color: #333; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -208,7 +208,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Alinha o conteúdo ao topo */
+  justify-content: flex-start;
   align-items: center;
   padding: 1rem;
 }
@@ -219,7 +219,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
-    padding: 0 0 0 1rem; /* Ajuste o padding para compensar a margem do lado esquerdo */
+    padding: 0 0 0 1rem;
 }
 
 .admin-tag {
@@ -245,13 +245,13 @@
     padding: 5px;
 }
 
-/* A imagem agora está centralizada horizontalmente e tenta preencher a altura */
+
 .pet-large {
   width: 90%;
   max-height: 90%;
   object-fit: contain; 
-  align-self: center; /* Centraliza verticalmente e horizontalmente */
-  margin: auto; /* Centraliza a imagem no espaço restante */
+  align-self: center; 
+  margin: auto; 
 }
 
 

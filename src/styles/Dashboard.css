@@ -135,8 +135,8 @@
 
 
 .progress-circle {
-  width: 110px;
-  height: 110px;
+  width: 20rem;
+  height: 20rem;
   border-radius: 50%;
   background: conic-gradient(#c97a1b 0% 86%, #e6cdb1 0%);
   display: flex;
@@ -186,13 +186,13 @@
 }
 
 .etapa.roxo .icon-circle {
-  background-color: #c3b7e6;
+  background-color: var(--roxo);
 }
 .etapa.verde .icon-circle {
-  background-color: #8be4b1;
+  background-color: var(--verde);
 }
 .etapa.amarelo .icon-circle {
-  background-color: #f6d26b;
+  background-color: var(--amarelo);
 }
 .etapa.cinza .icon-circle {
   background-color: #dcdcdc;
@@ -200,7 +200,9 @@
 
 .etapa span {
   display: block;
-  font-weight: 500;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif; 
+  font-size: 1rem;
 }
 
 .info-cards {

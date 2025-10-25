@@ -24,8 +24,8 @@ function Pets() {
             <p>Listagem dos pets cadastrados no nosso sistema.</p>
           </div>
 
-          {/* ✅ Botão de adicionar pet (aparece só pra admin) */}
-          {isAdmin && (
+          {/* ✅ Botão de adicionar pet (aparece só pra admin) 
+          {isAdmin && (*/}
             <button
               className="btn-add-pet"
               onClick={() => navigate("/pets/novo")}
@@ -33,7 +33,6 @@ function Pets() {
               <PlusCircleIcon size={22} weight="fill" />
               Adicionar Pet
             </button>
-          )}
         </div>
       </div>
 
