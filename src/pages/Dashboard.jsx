@@ -14,12 +14,36 @@ import {
 
 function Dashboard() {
 
+  const user = JSON.parse(localStorage.getItem("user")) || {};
+  const isAdmin = user?.usuarioadmin === true;
+
   const [pets, setPets] = useState([]);
+  const [adocoes, setAdocoes] = useState([]);
+  const [adotantes, setAdotantes] = useState([]);
 
   const fetchPets = async () => {
     const response = await axios.get(`${import.meta.env.VITE_API_URL}/pets`)
     setPets(response.data)
   }
+
+  useEffect(() => { 
+  fetchPets()}, [])
+
+  const fetchAdocoes = async () => {
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/adocoes`)
+      setAdocoes(response.data)
+    }
+
+  useEffect(() => { 
+  fetchAdocoes()}, [])
+
+  const fetchAdotantes = async () => {
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/adotantes`)
+      setAdotantes(response.data)
+    }
+    
+    useEffect(() => { 
+    fetchAdotantes()}, [])
 
   const totalAdotados = useMemo(() => {
     return pets.filter(pet => pet.estado === "adotado").length;
@@ -53,26 +77,21 @@ function Dashboard() {
 
   }, [pets]);
 
-  console.log("Últimos 3 pets:", ultimosPets);
+  const historicoAdocoes = useMemo(() => {
+  const idsDeAdotantes = new Set(adotantes.map(adotante => adotante.id));
+  return adocoes.filter(adocao => 
+    idsDeAdotantes.has(adocao.adotantes_id)
+  );
+}, [adocoes, adotantes]);
 
-  console.log(pets);
+  console.log(historicoAdocoes);
 
-  useEffect(() => { 
-  fetchPets()}, [])
-
-  const user = JSON.parse(localStorage.getItem("user")) || {};
-  const isAdmin = user?.usuarioadmin === true;
-  const [adocoes, setAdocoes] = useState([]);
-
-  const fetchAdocoes = async () => {
-      const response = await axios.get(`${import.meta.env.VITE_API_URL}/adocoes`)
-      setAdocoes(response.data)
-    }
-
-  useEffect(() => { 
-  fetchAdocoes()}, [])
-
-  console.log(adocoes);
+  const mapaDePets = useMemo(() => {
+  return pets.reduce((acc, pet) => {
+    acc[pet.id] = pet.nome;
+    return acc;
+  }, {});
+}, [pets]);
 
   return (
     <>
@@ -190,8 +209,24 @@ function Dashboard() {
             <div className="info-cards">
               <div className="card-info">
                 <h3>Histórico de adoções</h3>
-                <p>Você não possui nenhuma adoção em seu perfil.</p>
+                
+                {historicoAdocoes.length > 0 ? (
+                  <ul>
+                    {historicoAdocoes.map(adocao => (
+                      <li key={adocao.id}>
+                      {new Date(adocao.data_adocao).toLocaleDateString('pt-BR', {timeZone: 'UTC'})}
+                      <br></br>
+                      {mapaDePets[adocao.pets_id] || 'Nome não encontrado'}
+                      <br></br>
+                      <br></br> 
+                      </li>
+                    ))}
+    </ul>
+  ) : (
+    <p>Nenhum histórico de adoção encontrado.</p>
+  )}
               </div>
+
               <div className="card-info">
                 <h3>Pets cadastrados</h3>
                 <p>Cadastre o seu pet para adoção <Link to="/listapets">clicando aqui</Link>.</p>
