@@ -16,6 +16,7 @@ import Adocoes from "./pages/Adocoes.jsx";
 import Perfil from "./pages/Perfil.jsx";
 import EditarPerfil from "./pages/EditarPerfil.jsx";
 import Usuarios from "./pages/Usuarios.jsx";
+import Page404 from "./pages/Page404.jsx";
 
 export default function App() {
   return (
@@ -36,6 +37,7 @@ export default function App() {
         <Route path="/perfil" element={<Perfil />} />
         <Route path="/editarperfil" element={<EditarPerfil />} />
         <Route path="/usuarios" element={<Usuarios />} />
+        <Route path="*" element={<Page404 />} />
       </Routes>
     </BrowserRouter>
   );
