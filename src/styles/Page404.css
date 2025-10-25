@@ -1,0 +1,24 @@
+.page404-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  text-align: center;
+}
+
+.titulo-erro {
+  font-size: 2rem;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.imagem-erro {
+  max-width: 700px; 
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.imagem-erro:hover {
+  transform: scale(1.05); 
+}
