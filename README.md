@@ -51,7 +51,7 @@ O back-end deve estar funcionando antes de se executar o projeto na etapa 5.
 
 ## IMPLEMENTAÇÕES FUTURAS (Última atualização em: 25/10/2025)
 
-1. Filtros de pesquisa completos do card de pets, por nome, estado, etc. (atualmente disponível apenas para adotantes logados por nome do pet);
+1. Filtros de pesquisa avançados de pets, por estado, tamanho, personalidade, etc. (atualmente disponível apenas por nome do pet);
 2. Modo escuro.
 
 
