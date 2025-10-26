@@ -44,12 +44,16 @@ function Menu() {
 
       {isAuthenticated() ? (
         <>
-        <Link to="/usuarios">
+        {isAdmin && (
+          <>
+            <Link to="/usuarios">
             <div className="perfil-menu">
             <UserCircleIcon size={21} />
-            <p>Olá, {user?.nome}</p>
+            <p>Usuários</p>
           </div>
           </Link>
+          </>
+        )}
           
           <div className='sair-menu' onClick={handleLogout}>
             <p>Sair</p>

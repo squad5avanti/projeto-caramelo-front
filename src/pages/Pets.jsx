@@ -1,10 +1,36 @@
 import { PlusCircleIcon } from "@phosphor-icons/react";
 import { useNavigate } from "react-router-dom";
 import Menu from "../components/Menu.jsx";
-import PetCard from "../components/pets/PetCard.jsx";
+import PetCardBusca from "../components/pets/PetCardBusca.jsx";
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function Pets() {
   const navigate = useNavigate();
+
+  const [search, setSearch] = useState("");
+
+  const [pets, setPets] = useState([]);
+
+  const fetchPets = async () => {
+    const response = await axios.get(`${import.meta.env.VITE_API_URL}/pets`)
+    setPets(response.data)
+  }
+
+   const filteredPets = pets.filter((pet) => 
+        [pet.nome].some((field) => 
+            field.toLowerCase().includes(search.toLowerCase())
+        )
+    )
+
+   const filteredPetsEstado = pets.filter((pet) => 
+        [pet.estado].some((field) => 
+            field.toLowerCase().includes(search.toLowerCase())
+        )
+    )
+
+  useEffect(() => { 
+  fetchPets()}, [])
 
   const getUser = () => {
     const user = localStorage.getItem("user");
@@ -33,10 +59,21 @@ function Pets() {
               <PlusCircleIcon size={22} weight="fill" />
               Adicionar Pet
             </button>
+            <div className="pets-search-container" style={{ margin: '20px 0' }}>
+          <input
+            type="text"
+            className="pets-search-input"
+            placeholder="Buscar pet pelo nome..."
+            value={search} // O valor é controlado pelo estado
+            onChange={e => setSearch(e.target.value)} // Atualiza o estado em tempo real
+            style={{ width: '100%', padding: '15px', fontSize: '1rem', boxSizing: 'border-box' }}
+          />
+            </div>
+
         </div>
       </div>
 
-      <PetCard />
+      <PetCardBusca pets2={filteredPets} />
     </>
   );
 }

@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import ModalPetCard from './ModalPetCard.jsx'
 
 
-function PetCard({ pets2 }) {
+function PetCardBusca({ pets2 }) {
   const [pets, setPets] = useState([]);
 
   const user = JSON.parse(localStorage.getItem('user'));
@@ -48,7 +48,7 @@ function PetCard({ pets2 }) {
     <>
     
       <div className='card-pets'>
-        {pets.map((pet) => (
+        {pets2.map((pet) => (
           <div className='pet-card'>
             <header className='header-card-pet'>
               <p>
@@ -114,4 +114,4 @@ function PetCard({ pets2 }) {
   )
 }
 
-export default PetCard;
+export default PetCardBusca;
