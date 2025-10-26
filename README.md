@@ -1,16 +1,57 @@
-# React + Vite
+# Projeto Caramelo Frontend - Bootcamp Avanti Desenvolvimento Full-stack 2025.3
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto de aplicação web full-stack de conclusão do curso, utilizando as seguintes tecnologias:
 
-Currently, two official plugins are available:
+Banco de Dados: PostgreSQL
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Back-end: JavaScript com Node.JS, Express e Prisma ORM 
 
-## React Compiler
+Front-end: JavaScript com React
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## OBJETIVO
 
-## Expanding the ESLint configuration
+Aplicação web para cadastramento e controle voltada para um abrigo de pets, de forma a agilizar e modernizar o processo.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## INSTALAÇÃO
+
+1. Clonar o repositório:
+
+```bash
+git clone git@github.com:squad5avanti/projeto-caramelo-front.git
+cd main
+```
+
+2. Instalar as dependências do projeto:
+
+```bash
+npm install
+```
+
+3. Criar um arquivo ".env" no diretório raíz do projeto com a variável "VITE_API_URL" apontando para a URL do servidor Backend conectado ao banco de dados, como no exemplo:
+
+```bash
+VITE_API_URL=http://localhost:{$porta}
+```
+
+5. Execute o projeto:
+   
+```bash
+npm run dev
+```
+
+## INFORMAÇÕES ADICIONAIS
+
+## Backend necessário
+
+Este front-end se comunica com uma **API REST** 
+
+O back-end deve estar funcionando antes de se executar o projeto na etapa 5.
+
+🔗 Repositório da API no GitHub (backend): https://github.com/squad5avanti/Projeto-Caramelo
+
+## IMPLEMENTAÇÕES FUTURAS (Última atualização em: 25/10/2025)
+
+1. Filtros de pesquisa completos do card de pets, por nome, estado, etc. (atualmente disponível apenas para adotantes logados por nome do pet);
+2. Modo escuro.
+
+
